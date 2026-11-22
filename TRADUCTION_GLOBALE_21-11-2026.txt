@@ -1,0 +1,10 @@
+MISE A JOUR - TRADUCTION GLOBALE
+
+- Extension des dictionnaires français -> anglais et français -> arabe pour les textes d'interface encore manquants.
+- Couverture des libellés des alarmes, états, écrans de rappels, analyse, conseils, erreurs et textes dynamiques.
+- Traduction centralisée du titre et du contenu de toutes les notifications d'alarme.
+- Traduction du rappel quotidien avant le coucher et nom/description de son canal de notification selon la langue active.
+- Traduction du titre de confirmation de fin de suivi et du texte partagé depuis les conseils.
+- Conservation du français comme langue par défaut et conservation des données saisies par l'utilisateur (nom, e-mail, dates, etc.).
+
+Contrôle : archive ZIP vérifiée. La compilation Android n'a pas pu être exécutée dans cet environnement car Gradle 9.3.0 n'est pas disponible localement et le téléchargement de services.gradle.org est inaccessible.

@@ -1,0 +1,6 @@
+MISE A JOUR - ALARMES COUCHER ET REVEIL
+
+- Le rappel du coucher est active par defaut lors d'une premiere configuration (si aucune preference n'existe encore).
+- Les alarmes du coucher et du reveil sont reprogrammees separement apres l'enregistrement, selon leurs interrupteurs respectifs.
+- Le rappel du coucher declenche le meme service sonore/vibrant que le reveil, avec les actions Arreter et Repeter 5 min.
+- Les preferences deja enregistrees sont conservees : si le rappel du coucher etait explicitement desactive, il reste desactive et peut etre reactive depuis l'ecran des alarmes.

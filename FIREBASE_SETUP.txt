@@ -1,0 +1,57 @@
+SOMMEIL PLUS — CONFIGURATION FIREBASE (à faire une seule fois)
+
+IMPORTANT : le fichier google-services.json n'est pas inclus dans le ZIP.
+Il est propre à TON projet Firebase. Ne prends pas celui d'un autre projet.
+
+A. Créer le projet Firebase
+1. Ouvre https://console.firebase.google.com et connecte-toi.
+2. Clique « Ajouter un projet » et donne-lui un nom (ex. SommeilPlus).
+3. Dans la page du projet, clique sur l'icône Android pour ajouter une application Android.
+4. Saisis exactement ce nom de package : com.example.sommeilplus
+5. Télécharge google-services.json.
+6. Copie ce fichier dans le dossier app/ du projet Android, à côté de app/build.gradle.kts.
+   Chemin final : SommeilPlus/app/google-services.json
+
+B. Activer la connexion par e-mail
+1. Firebase Console > Authentication > Commencer.
+2. Ouvre « Sign-in method » / « Méthode de connexion ».
+3. Active « E-mail/Mot de passe », puis Enregistrer.
+4. Dans Authentication > Templates / Modèles, personnalise le modèle
+   « Réinitialisation du mot de passe » et choisis la langue française.
+
+C. Créer Firestore
+1. Firebase Console > Firestore Database > Créer une base de données.
+2. Choisis le mode production et sélectionne la région la plus proche des utilisateurs.
+3. Ouvre l'onglet Règles.
+4. Copie le contenu du fichier firestore.rules situé à la racine du ZIP.
+5. Clique Publier.
+
+D. Ouvrir le projet Android
+1. Extrais le ZIP dans un dossier normal.
+2. Dans Android Studio : File > Open > choisis le dossier qui contient settings.gradle.kts.
+3. Vérifie que google-services.json est bien dans app/.
+4. Clique File > Sync Project with Gradle Files.
+5. Puis Build > Make Project et corrige toute erreur affichée avant de lancer l'application.
+
+CE QUE FIREBASE GÈRE
+- Authentication : création de compte, connexion et réinitialisation du mot de passe.
+- Firestore : profil utilisateur, nuits enregistrées et paramètres d'alarmes.
+- Les données de chaque utilisateur sont protégées par les règles de firestore.rules.
+
+À PROPOS DU « CODE » DE RÉINITIALISATION
+Firebase Authentication standard envoie un e-mail contenant un lien sécurisé de réinitialisation.
+Ce lien contient un code d'action à usage unique, mais l'utilisateur ne reçoit pas un code numérique
+à six chiffres à recopier dans l'application. Pour un vrai code numérique par e-mail, il faudrait
+ajouter un backend sécurisé (par exemple Cloud Functions) et un fournisseur d'envoi d'e-mails.
+Ne mets jamais une clé privée ou un mot de passe SMTP dans l'application Android.
+
+ALARME
+- Autorise les notifications Android pour Sommeil Plus.
+- Autorise « Alarmes et rappels » / les alarmes exactes si Android le demande.
+- Vérifie que le volume « Alarme » du téléphone est audible et que le mode Ne pas déranger
+  ne bloque pas les notifications.
+- Teste d'abord une alarme 2 à 3 minutes dans le futur, écran verrouillé.
+
+IMPORTANT POUR CHAQUE NOUVEAU ZIP
+Le fichier app/google-services.json est personnel au projet Firebase et n'est pas fourni ici.
+Si tu remplaces ton dossier Android Studio par un nouveau ZIP, remets ce fichier dans app/.

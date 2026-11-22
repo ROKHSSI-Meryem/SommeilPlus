@@ -1,0 +1,34 @@
+MODIFICATIONS SOMMEILPLUS - 21/11/2026
+
+Objectif :
+- Conserver les pages et fonctions existantes de SommeilPlus.
+- Garder la notification persistante avec ses deux boutons.
+- Afficher une interface plein écran utilisant le thème existant de SommeilPlus au déclenchement de l'alarme.
+- Corriger notification_alarm.xml pour RemoteViews : suppression du composant View non pris en charge et remplacement par une marge.
+
+Fichiers ajoutés :
+- app/src/main/java/com/example/sommeilplus/AlarmScreenActivity.kt
+- app/src/main/res/layout/activity_alarm_screen.xml
+
+Fichiers modifiés :
+- app/src/main/AndroidManifest.xml
+- app/src/main/java/com/example/sommeilplus/AlarmRingService.kt
+- app/src/main/java/com/example/sommeilplus/SleepNotifications.kt
+- app/src/main/res/layout/notification_alarm.xml
+
+Actions :
+- Arrêter : envoie ACTION_STOP au AlarmActionReceiver.
+- Répéter 5 min : envoie ACTION_SNOOZE au AlarmActionReceiver.
+- La notification utilise toujours setOngoing(true) et setAutoCancel(false).
+
+IMPORTANT :
+Android contrôle lui-même l'affichage heads-up des notifications et peut le masquer après un délai.
+L'interface plein écran utilise l'API full-screen intent d'Android. Sur Android 14 et versions ultérieures,
+l'accès aux notifications plein écran peut être soumis à l'autorisation spéciale "Alarmes et rappels"
+ou "Notifications plein écran" dans les paramètres de l'application. Si le système refuse cette autorisation,
+l'affichage plein écran peut être limité à une notification heads-up.
+
+Vérification :
+Les fichiers XML ont été analysés. La compilation Gradle n'a pas pu être exécutée ici car
+le wrapper doit télécharger Gradle depuis Internet, et l'environnement n'a pas d'accès réseau.
+Il faut faire Sync/Rebuild dans Android Studio avant l'installation.

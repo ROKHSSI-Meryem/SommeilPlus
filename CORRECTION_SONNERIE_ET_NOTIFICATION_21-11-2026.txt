@@ -1,0 +1,18 @@
+CORRECTION SONNERIE + NOTIFICATION — 21/11/2026
+
+Objectif : lorsque l'heure de coucher ou de réveil arrive, afficher la notification d'alarme et faire entendre une vraie sonnerie, pas seulement vibrer.
+
+Modifications :
+- Les identifiants des canaux Android ont été versionnés (v8 / ring v4) pour éviter de réutiliser d'anciens canaux configurés silencieusement.
+- Le canal de rappel garde un son de type ALARM et une vibration.
+- Le service d'alarme lance une sonnerie MediaPlayer en boucle avec l'usage audio USAGE_ALARM ; Ringtone reste le mécanisme de secours.
+- La notification persistante avec les actions Arrêter et Répéter 5 min est conservée.
+- Des logs confirment le démarrage de la lecture sonore dans Logcat (SommeilPlusAlarm).
+
+À vérifier sur le téléphone :
+1. Autoriser les notifications de Sommeil Plus dans Android.
+2. Autoriser les alarmes exactes si Android le demande.
+3. Vérifier que le volume « Alarme » du téléphone n'est pas à zéro et que le canal « Rappels sommeil » n'est pas silencieux.
+4. Tester avec une heure située quelques minutes dans le futur, écran verrouillé.
+
+Limite Android : si l'utilisateur refuse la permission de notification, désactive le canal, met le volume d'alarme à zéro ou active une restriction système, l'application ne peut pas contourner ces choix.

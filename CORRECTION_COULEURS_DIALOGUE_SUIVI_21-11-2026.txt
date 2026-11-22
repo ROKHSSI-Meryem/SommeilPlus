@@ -1,0 +1,5 @@
+Correction des boutons du dialogue « Terminer le suivi »
+- « Annuler » / « Cancel » / « إلغاء » : bouton rouge avec texte blanc.
+- « Continuer le suivi » / « Continue tracking » / « متابعة التتبع » : bouton rempli avec le dégradé bleu/cyan du thème SommeilPlus et texte blanc.
+- Les autres boutons négatifs conservent leur style secondaire.
+Le comportement des actions n'a pas été modifié : seul le style visuel a changé.

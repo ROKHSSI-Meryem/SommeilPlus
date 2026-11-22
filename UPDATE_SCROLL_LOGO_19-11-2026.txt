@@ -1,0 +1,11 @@
+Mise a jour du 19/11/2026
+
+- Ajout du logo graphique Sommeil Plus dans Splash, Login, Inscription, Onboarding, barre superieure et en-tetes des pages.
+- Ajout du logo comme icone de lancement Android (ic_launcher et ic_launcher_round).
+- Ajout du defilement vertical aux pages Login, Inscription et Export.
+- Ajout d'un ScrollView dans chaque page du ViewPager2 de l'Onboarding.
+- Les pages Accueil, Alarmes, Objectifs, Conseils, Compte, Parametres, Historique, Analyse, Notifications et Reglages conservent leur defilement.
+- La barre de navigation inferieure reste fixe dans MainActivity.
+
+Verification effectuee : verification des ressources et du contenu de l'archive ZIP.
+Aucun build Android ni test sur appareil n'a ete effectue dans cet environnement.

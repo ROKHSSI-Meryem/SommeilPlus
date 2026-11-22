@@ -1,0 +1,11 @@
+Correction des notifications d'alarme
+
+- Une notification de secours est maintenant publiée avant le démarrage du service de sonnerie.
+- Le service publie immédiatement sa notification persistante avec les boutons Arrêter et Répéter.
+- Le canal du service a été versionné pour recréer un canal propre après les anciens réglages Android.
+- L'écran Réveil & coucher affiche maintenant l'état réel de l'autorisation des notifications et propose d'ouvrir directement les réglages Android.
+- Après acceptation de l'autorisation, les alarmes sauvegardées sont reprogrammées.
+
+IMPORTANT : Android 13 et versions ultérieures bloquent l'affichage des notifications si l'utilisateur n'accorde pas POST_NOTIFICATIONS. Vérifier l'état dans Réveil & coucher > Autorisation des notifications. Les restrictions de batterie et l'autorisation des alarmes exactes peuvent aussi retarder le déclenchement.
+
+La compilation n'a pas pu être vérifiée dans cet environnement : Gradle 9.3.0 doit être téléchargé depuis services.gradle.org, mais l'accès réseau est indisponible.

@@ -1,0 +1,46 @@
+SOMMEIL PLUS — MISE À JOUR DU 20/11/2026
+
+Base utilisée : SommeilPlus_ALARME_FIREBASE_V4.zip
+Les écrans, la navigation, la palette de couleurs et le logo existants ont été conservés.
+
+CHANGEMENTS
+1. Défilement / clavier
+- Les écrans longs existants restent dans des ScrollView.
+- adjustResize est défini explicitement pour les activités qui n'avaient pas ce réglage.
+- Login et inscription conservent leur ScrollView et le redimensionnement quand le clavier apparaît.
+- La navigation inférieure de MainActivity se masque pendant la saisie, puis revient à la fermeture du clavier.
+
+2. Âge minimum
+- Le sélecteur de date bloque les dates de naissance postérieures à la date limite des 18 ans.
+- Le contrôle compare les dates civiles sans comparer l'heure courante.
+- Une personne qui atteint exactement 18 ans aujourd'hui est acceptée; une personne plus jeune est refusée.
+- Validation du format de l'e-mail ajoutée à l'inscription.
+
+3. Mot de passe oublié
+- Le formulaire e-mail s'affiche même si Firebase n'est pas encore configuré.
+- Au clic sur Envoyer, l'application vérifie la configuration Firebase puis appelle
+  Firebase Authentication sendPasswordResetEmail.
+- Firebase Authentication standard envoie un lien sécurisé avec un code d'action à usage unique,
+  et non un code numérique à six chiffres. Un code numérique nécessiterait un backend sécurisé
+  (Cloud Functions + fournisseur d'e-mail).
+
+4. Alarmes
+- Le système existant est conservé : coucher et réveil, alarmes planifiées,
+  son/vibration en boucle, Arrêter, Répéter 5 min et reprogrammation quotidienne/après redémarrage.
+- Les alarmes dépendent des autorisations Android, du volume d'alarme et des restrictions du téléphone.
+
+5. Firebase
+- FIREBASE_SETUP.txt a été réécrit avec les étapes complètes : créer le projet,
+  ajouter Android package com.example.sommeilplus, placer google-services.json dans app/,
+  activer Email/Password, créer Firestore et publier firestore.rules.
+- Le fichier google-services.json reste à ajouter par l'utilisatrice : il est propre à son projet Firebase.
+
+VALIDATION
+- AndroidManifest.xml vérifié comme XML valide.
+- Structure de l'archive d'origine lue et les fichiers modifiés sont présents.
+- Une compilation Gradle/Android n'a pas pu être exécutée ici : le ZIP ne contient pas
+  gradlew/gradlew.bat et cet environnement n'a pas Android SDK ni Gradle installés.
+- Il faut donc ouvrir le projet dans Android Studio, ajouter google-services.json,
+  faire Gradle Sync puis Build > Make Project, et tester sur téléphone/émulateur.
+- Avant publication Play Store, effectuer les tests de permissions/alarme sur plusieurs versions Android
+  et vérifier les exigences Google Play relatives aux alarmes exactes et aux services en premier plan.

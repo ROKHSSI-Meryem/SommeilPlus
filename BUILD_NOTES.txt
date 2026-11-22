@@ -1,0 +1,11 @@
+Sommeil Plus - version avec interface sombre inspiree des 3 captures fournies
+
+Modifications UI :
+- Palette sombre bleu nuit / anthracite avec accents cyan et cartes foncees.
+- Barre superieure, navigation inferieure, boutons, champs et cartes harmonises.
+- Tableau de bord : resume de la derniere nuit, moyenne, objectif et courbe de sommeil.
+- Alarmes : ecran de routine coucher/reveil avec heures visibles, choix des heures, interrupteurs, sauvegarde et desactivation.
+- Analyse : indicateurs, histogramme de qualite et courbe de duree.
+- Les autres onglets et fonctions du projet sont conserves.
+
+Important : le projet a ete modifie et le contenu de l'archive a ete verifie, mais aucun build Android reel n'a pu etre execute dans cet environnement (Android SDK / Gradle non disponibles). Ouvrir le dossier SommeilPlus dans Android Studio, effectuer Gradle Sync puis Build > Make Project. Les captures de reference sont des inspirations de mise en page ; une equivalence pixel par pixel ne peut etre confirmee sans execution sur l'appareil cible.

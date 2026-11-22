@@ -1,0 +1,2 @@
+-keep class com.github.mikephil.charting.** { *; }
+-keepclassmembers class * extends android.view.View { public <init>(android.content.Context); }

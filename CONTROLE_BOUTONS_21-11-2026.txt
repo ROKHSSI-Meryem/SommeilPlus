@@ -1,0 +1,44 @@
+SOMMEIL PLUS — CONTRÔLE DES BOUTONS
+Mise à jour : 21-11-2026
+
+CORRECTIONS EFFECTUÉES DANS CETTE VERSION
+1. NotificationsActivity.kt
+   - Le bouton « Enregistrer les alarmes » reste visible même lorsqu'une alarme est déjà activée.
+   - Le bouton « Désactiver les deux alarmes » apparaît uniquement lorsqu'au moins une alarme est activée.
+   - L'affichage des boutons se met à jour dès que l'utilisateur change un interrupteur.
+   - L'état initial de l'alarme du coucher correspond maintenant à l'état réellement enregistré (désactivé par défaut).
+   - Les libellés de la barre de navigation sont traduits séparément des icônes.
+   - Une erreur de programmation des alarmes est journalisée et signalée au lieu de provoquer une fermeture silencieuse.
+
+2. DashboardFragment.kt
+   - Le bouton « Ajouter une session » valide les valeurs avant de fermer la fenêtre.
+   - Si les valeurs sont invalides, la fenêtre reste ouverte pour permettre la correction.
+   - Si elles sont valides, la session est enregistrée puis le tableau de bord est actualisé.
+
+3. GoalsFragment.kt
+   - Après « Enregistrer », les objectifs sont sauvegardés et la progression est recalculée immédiatement.
+
+4. LoginActivity.kt
+   - Le bouton « Se connecter » possède directement son véritable gestionnaire d'action (aucun gestionnaire vide remplacé ensuite).
+
+FONCTIONS DES BOUTONS / COMMANDES PRÉSENTES DANS LE PROJET
+- Navigation principale : Accueil, Alarme, Objectifs, Conseils, Profil, Réglages.
+- Profil : Historique, Analyse, Export CSV, Déconnexion.
+- Accueil : Ajouter une session, Enregistrer, Annuler.
+- Objectifs : Enregistrer les objectifs.
+- Conseils : choisir une difficulté dans la liste, partager un conseil.
+- Alarmes : choisir l'heure du coucher, choisir l'heure du réveil, activer/désactiver chaque rappel, démarrer/terminer le suivi, enregistrer les alarmes, désactiver les deux alarmes, ouvrir les paramètres Android.
+- Authentification : afficher/masquer le mot de passe, mot de passe oublié, envoyer la demande de réinitialisation, se connecter, créer un compte, choisir la date de naissance.
+- Onboarding : Précédent, Suivant, Commencer.
+- Réglages : autoriser les notifications, ouvrir les paramètres Android, choisir Français/English/العربية.
+- Notification d'alarme : Arrêter, Répéter 5 min.
+- Pages secondaires : Précédent et barre de navigation.
+
+LIMITES DE VALIDATION
+- Une recherche statique du code ne trouve pas de gestionnaire de clic vide laissé en place ni de TODO de bouton.
+- Le projet n'a PAS pu être compilé ici : le Gradle Wrapper tente de télécharger Gradle 9.3.0 depuis services.gradle.org, mais la connexion réseau/DNS est indisponible (UnknownHostException).
+- Les actions qui dépendent des autorisations Android, de Firebase, des paramètres de notification, ou du comportement du fabricant doivent être testées sur un vrai appareil/émulateur configuré.
+- Cette mise à jour corrige les défauts identifiés dans le code, mais ne prétend pas remplacer un test manuel de chaque écran.
+
+TEST MANUEL CONSEILLÉ
+Ouvrir chaque onglet, appuyer sur chaque bouton, et vérifier que l'écran/action correspond au libellé. Pour les alarmes : activer une alarme, changer son heure, appuyer sur Enregistrer, revenir à l'écran Alarmes, puis vérifier l'heure et l'état. Tester aussi Arrêter et Répéter 5 min depuis la notification.

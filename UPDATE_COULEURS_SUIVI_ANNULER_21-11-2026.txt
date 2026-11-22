@@ -1,0 +1,10 @@
+Mise à jour des couleurs des boutons
+
+- Le bouton Démarrer / Terminer le suivi utilise maintenant le bouton principal bleu/cyan du thème SommeilPlus.
+- Les boutons dont le libellé est Annuler / Cancel / إلغاء utilisent un fond rouge.
+- Les actions secondaires telles que Continuer le suivi conservent le style bleu sombre du thème.
+- Le bouton Enregistrer conserve le dégradé bleu/cyan du thème.
+
+Fichiers modifiés :
+- app/src/main/java/com/example/sommeilplus/NotificationsActivity.kt
+- app/src/main/java/com/example/sommeilplus/Ui.kt

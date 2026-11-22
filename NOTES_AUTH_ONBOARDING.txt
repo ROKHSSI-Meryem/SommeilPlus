@@ -1,0 +1,9 @@
+Modifications apportees :
+- Onboarding en 3 pages ViewPager2, avec balayage horizontal, icone, titre, description et indicateurs.
+- Bouton Suivant/Commencer unique place en bas de l'ecran; Retour discret apparait apres la premiere page.
+- Connexion redesignée selon le thème sombre bleu de l'application, formulaire simplifié et action principale en bas.
+- Inscription redesignée avec formulaire défilant et boutons/actions fixés en bas.
+- Ajout de la dépendance AndroidX ViewPager2.
+
+A vérifier dans Android Studio : Gradle Sync puis Build > Make Project et tester le parcours Splash > Onboarding > Connexion > Inscription.
+Le projet n'a pas été compilé ici (SDK Android/Gradle non disponibles dans cet environnement).

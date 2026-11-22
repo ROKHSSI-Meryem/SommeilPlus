@@ -1,0 +1,6 @@
+Corrections appliquees a partir de l'archive fournie :
+- Correction de la lecture des preferences des alarmes dans AlarmFragment : utilisation de "reminders", comme dans NotificationsActivity et AlarmScheduler.
+- Harmonisation des icones de lancement (normale, ronde et adaptive) avec le logo Sommeil Plus deja present dans le projet.
+- Aucun changement volontaire aux ecrans, textes ou fonctionnalites hors correction necessaire.
+
+Verification : les fichiers ont ete controles et l'archive a ete reconstruite. La compilation Android n'a pas pu etre executee dans cet environnement car Android SDK et Gradle ne sont pas installes. Ouvrir le dossier SommeilPlus dans Android Studio, attendre Gradle Sync, puis lancer Build > Make Project.

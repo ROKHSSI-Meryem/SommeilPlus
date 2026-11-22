@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sommeil Plus</string>
+    <string name="welcome">Dormez mieux, vivez mieux</string>
+    <string name="dashboard">Tableau de bord</string>
+    <string name="goals">Objectifs</string>
+    <string name="advice">Conseils sommeil</string>
+    <string name="account">Mon compte</string>
+</resources>

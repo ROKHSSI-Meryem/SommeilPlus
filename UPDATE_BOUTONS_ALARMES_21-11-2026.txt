@@ -1,0 +1,10 @@
+MISE À JOUR — AFFICHAGE DES BOUTONS DES ALARMES
+Date : 21-11-2026
+
+Comportement demandé :
+- Tant qu'aucune alarme n'est enregistrée comme active, seul le bouton « Enregistrer les alarmes » est affiché.
+- Après clic sur « Enregistrer les alarmes », si au moins une alarme (coucher ou réveil) est activée, le bouton d'enregistrement disparaît et « Désactiver les deux alarmes » apparaît.
+- Après clic sur « Désactiver les deux alarmes », les deux interrupteurs sont désactivés, les alarmes sont annulées et le bouton de désactivation disparaît. « Enregistrer les alarmes » réapparaît.
+- L'état des boutons est également restauré correctement lors de la réouverture de la page, selon les alarmes enregistrées.
+
+Fichier modifié : app/src/main/java/com/example/sommeilplus/NotificationsActivity.kt

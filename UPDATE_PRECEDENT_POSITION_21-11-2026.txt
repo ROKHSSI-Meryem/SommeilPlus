@@ -1,0 +1,5 @@
+MISE A JOUR - POSITION DU BOUTON PRECEDENT
+
+Le bouton « Précédent » des pages secondaires a été déplacé depuis le haut de la page vers une zone fixe en bas de l'écran, juste au-dessus de la barre de navigation de l'application.
+Le bouton reste visible pendant le défilement et conserve son action de retour ainsi que son style.
+Aucun autre écran, contenu ou fonctionnalité n'a été volontairement modifié.

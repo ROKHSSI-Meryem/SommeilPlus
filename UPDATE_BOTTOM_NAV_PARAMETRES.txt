@@ -1,0 +1,6 @@
+Mise a jour : Parametres ajoute comme sixieme onglet de la Bottom Navigation.
+L'onglet ouvre maintenant SettingsFragment directement dans le conteneur principal, sans lancer une Activity separee.
+Les six onglets sont : Accueil, Alarmes, Objectifs, Conseils, Compte et Parametres.
+Le contenu Parametres comprend l'autorisation des notifications et le choix de langue FR/EN/AR.
+La taille des libelles de navigation a ete ajustee pour les six onglets.
+Verification effectuee : archive ZIP validee. Compilation Android Studio non executee dans cet environnement.

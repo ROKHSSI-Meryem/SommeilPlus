@@ -1,0 +1,6 @@
+Correction du 19-11-2026 :
+- Suppression des raccourcis Parametres, Notifications, Alarmes et Langue depuis Mon compte.
+- Mon compte contient uniquement les informations du profil, Historique, Analyse, Export et Deconnexion.
+- Parametres reste accessible uniquement depuis le 6e onglet de la Bottom Navigation via SettingsFragment.
+- La page Parametres contient l'autorisation des notifications et le choix de langue FR/EN/AR.
+Verification : archive ZIP controlee. Compilation Android Studio non executee dans cet environnement.

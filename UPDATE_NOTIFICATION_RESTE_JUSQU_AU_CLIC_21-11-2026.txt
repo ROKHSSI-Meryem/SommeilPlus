@@ -1,0 +1,12 @@
+Mise a jour - la notification reste jusqu'au clic sur Arreter ou Repeter - 21/11/2026
+
+- Rien d'autre n'a ete modifie dans l'application.
+- Si la notification de l'alarme est balayee (swipe) pendant que l'alarme sonne, elle est immediatement remise avec les boutons Arreter et Repeter 5 min.
+- Elle ne disparait que lorsque l'utilisateur appuie sur Arreter ou Repeter.
+- Fichiers modifies : AlarmRingService.kt, SleepNotifications.kt.
+
+A verifier sur le telephone si la notification n'apparait toujours pas :
+1) Parametres Android > Applications > Sommeil Plus > Notifications : tout active (y compris le canal "Rappels sommeil").
+2) Application > Batterie : "Sans restriction" (Xiaomi/Oppo/Samsung/Huawei : activer aussi le demarrage automatique).
+3) Alarmes et rappels : autoriser.
+La compilation n'a pas pu etre verifiee ici (pas d'acces reseau pour Gradle).

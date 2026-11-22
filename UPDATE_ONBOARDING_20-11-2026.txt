@@ -1,0 +1,10 @@
+Mise a jour du parcours :
+- Splash > Onboarding > Login uniquement lors de la premiere ouverture.
+- L'onboarding n'est plus relance apres inscription, connexion ou deconnexion.
+- Apres la fin de l'onboarding, ouverture de Login.
+- Apres une inscription reussie, ouverture de MainActivity.
+- Suppression de la fleche superieure dans Onboarding.
+- Correction des dimensions des pages ViewPager2 (MATCH_PARENT).
+Firebase :
+- Aucun parametre Firebase n'a ete modifie.
+- google-services.json n'est pas inclus dans l'archive d'origine ; conserver le meme fichier deja telecharge dans SommeilPlus/app/google-services.json.

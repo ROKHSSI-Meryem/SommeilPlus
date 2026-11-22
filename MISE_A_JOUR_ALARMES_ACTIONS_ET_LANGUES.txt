@@ -1,0 +1,20 @@
+MISE A JOUR - SOMMEIL PLUS
+
+Cette archive reprend le projet SommeilPlus avec les pages, la navigation, l'analyse, l'historique, l'export, les réglages, le suivi, les rappels et le système de traduction FR/EN/AR présents dans la version précédente.
+
+NOUVEAU :
+- Les notifications d'alarme proposent deux actions : Arrêter et Répéter 5 min.
+- Arrêter ferme la notification.
+- Répéter 5 min programme une nouvelle notification cinq minutes plus tard.
+- Les libellés des deux actions et le texte des notifications utilisent la langue enregistrée dans l'application.
+- Un canal de notification distinct est créé selon la langue sélectionnée afin que son nom soit localisé.
+
+IMPORTANT :
+- Ouvrir le dossier racine SommeilPlus dans Android Studio puis synchroniser Gradle.
+- Autoriser les notifications Android.
+- Autoriser les alarmes exactes dans les paramètres Android si le système le demande.
+- Vérifier que le volume des alarmes du téléphone est activé et que les restrictions de batterie ne bloquent pas l'application.
+- Tester les alarmes sur un téléphone ou un émulateur avec notifications autorisées.
+
+LIMITES DE VALIDATION :
+Le code source et l'archive ont été vérifiés, mais aucun build Gradle Android ni test sur appareil n'a pu être exécuté ici. Les comportements peuvent dépendre de la version Android et des autorisations de l'appareil.

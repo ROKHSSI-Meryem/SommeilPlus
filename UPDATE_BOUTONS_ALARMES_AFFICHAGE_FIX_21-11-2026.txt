@@ -1,0 +1,14 @@
+CORRECTION DE L’AFFICHAGE DES BOUTONS — 21-11-2026
+
+Fichier modifié : app/src/main/java/com/example/sommeilplus/NotificationsActivity.kt
+
+Correction : certaines anciennes versions pouvaient conserver la préférence alarmsConfigured=false alors que les préférences bed ou wake étaient déjà activées. Cela faisait apparaître un état de boutons incorrect à l’ouverture.
+
+Nouvelle règle :
+- Avant la première sauvegarde d'une configuration active : seul « Enregistrer les alarmes » est visible.
+- Après sauvegarde réussie avec au moins une alarme activée : seul « Désactiver les deux alarmes » est visible.
+- Dès qu'une heure ou un interrupteur est modifié : seul « Enregistrer les alarmes » réapparaît.
+- Après désactivation des deux alarmes : seul « Enregistrer les alarmes » réapparaît.
+- À la réouverture, l'état est restauré à partir des alarmes effectivement activées (bed/wake), sans dépendre d'une ancienne valeur incohérente de alarmsConfigured.
+
+Les préférences sont enregistrées de manière synchrone avant de mettre à jour l'affichage des boutons.

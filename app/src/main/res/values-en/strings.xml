@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sommeil Plus</string>
+    <string name="welcome">Sleep better, live better</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="goals">Goals</string>
+    <string name="advice">Sleep advice</string>
+    <string name="account">My account</string>
+</resources>

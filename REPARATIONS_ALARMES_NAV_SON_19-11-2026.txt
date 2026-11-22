@@ -1,0 +1,15 @@
+Corrections Sommeil Plus - navigation et alarmes
+
+1) Ajout d'une barre de navigation en bas de l'écran « Réveil & coucher », avec accès aux six sections principales.
+2) La navigation transmet l'onglet choisi à MainActivity.
+3) L'écran Alarmes actualise les heures et les états activé/désactivé lorsqu'on revient de la configuration.
+4) Les notifications d'alarme utilisent un nouveau canal sonore (v2), avec importance élevée, catégorie ALARM, son système de type alarme et vibration. Le nouvel identifiant permet à Android de créer le canal avec les nouveaux paramètres même si l'ancien canal avait déjà été créé.
+5) Les alarmes quotidiennes et leur reprogrammation existantes sont conservées.
+
+À vérifier sur l'appareil :
+- Autoriser les notifications de Sommeil Plus.
+- Sur Android 12 et plus, autoriser « Alarmes et rappels » / alarmes exactes pour une heure précise.
+- Vérifier que le canal « Alarmes de coucher et de réveil » n'est pas en mode silencieux et que le volume d'alarme du téléphone est audible.
+- Tester avec une heure située 2 ou 3 minutes dans le futur, écran verrouillé.
+
+Limite de validation : les sources ont été modifiées et l'archive contrôlée, mais la compilation Android et le test sur un vrai téléphone/émulateur n'ont pas pu être exécutés dans cet environnement. Le son dépend aussi des réglages Android, du mode Ne pas déranger et des autorisations.

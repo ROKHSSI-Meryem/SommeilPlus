@@ -1,0 +1,11 @@
+Mise à jour demandée : navigation et paramètres
+
+- Suppression du bouton/menu déroulant en haut de MainActivity.
+- Ajout d'un onglet Alarmes dans la barre de navigation inférieure, juste après Accueil.
+- Création d'une page Alarmes dédiée affichant les heures et états enregistrés, avec accès à la configuration complète des alarmes.
+- Retrait du bouton de configuration des alarmes du tableau de bord pour éviter le doublon.
+- Ajout d'une page Paramètres accessible depuis Mon compte.
+- La page Paramètres affiche l'état de l'autorisation des notifications, permet de demander l'autorisation Android 13+, et propose l'accès aux paramètres Android de l'application.
+- Ajout du choix Français / English / العربية via AppCompatDelegate.
+
+Limites à connaître : les écrans utilisent encore beaucoup de textes codés directement en français. Le sélecteur de langue applique la locale AndroidX, mais une traduction complète de tous les textes de l'application nécessite de remplacer ces textes par des ressources strings.xml. Build Android non exécuté ici : tester avec Gradle Sync et Build > Make Project dans Android Studio.

@@ -1,0 +1,10 @@
+Mises à jour : navigation globale et analyse du sommeil
+
+- Ajout d'une barre de navigation réutilisable dans Ui.withBottomNavigation.
+- Ajout de cette barre aux écrans secondaires : Analyse du sommeil, Historique, Export CSV et Paramètres.
+- La barre des écrans secondaires renvoie vers l'onglet correspondant dans MainActivity.
+- L'écran Réveil & coucher conserve sa barre de navigation.
+- Encadrement du chargement de l'écran Analyse du sommeil : une erreur de lecture/graphique ne doit plus fermer l'application; un écran de secours affiche le message et l'erreur dans Logcat.
+
+À vérifier sur l'émulateur : navigation de chaque onglet, ouverture de l'analyse, puis consulter Logcat avec le tag SommeilPlus si l'écran de secours apparaît.
+La compilation Android et l'exécution sur appareil n'ont pas pu être vérifiées dans cet environnement.

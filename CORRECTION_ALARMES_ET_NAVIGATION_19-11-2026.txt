@@ -1,0 +1,14 @@
+SOMMEIL PLUS — CORRECTION ALARMES ET NAVIGATION
+
+- Imports ContextCompat et PackageManager présents dans NotificationsActivity.
+- Identifiant de canal de notification renouvelé (sleep_alarm_v5) pour appliquer les réglages sonores mis à jour.
+- Canal de notification haute priorité avec son d'alarme et vibration.
+- Les alarmes du coucher et du réveil sont programmées séparément et se répètent chaque jour.
+- L'action Répéter 5 min programme une nouvelle alerte cinq minutes plus tard.
+- L'action Arrêter ferme l'alerte en cours.
+- Les boutons de navigation inférieure ouvrent chacun leur onglet dans MainActivity.
+- Les flèches de retour restent réservées aux écrans secondaires ; les pages principales gardent leur barre de navigation sans flèche.
+
+IMPORTANT ANDROID : pour une alerte à l'heure exacte sur Android 12+, autoriser Sommeil Plus dans Paramètres > Applications > Accès spécial > Alarmes et rappels (libellé variable selon le téléphone). Autoriser aussi les notifications et vérifier que le canal « Rappels sommeil » n'est pas en mode silencieux. Sans accès aux alarmes exactes, Android peut retarder l'alerte.
+
+Le ZIP a été vérifié, mais aucun appareil Android / SDK de compilation n'était disponible ici pour exécuter un test réel.

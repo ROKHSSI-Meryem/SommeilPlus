@@ -1,0 +1,11 @@
+Correction du parcours d'authentification :
+- Splash ouvre Login si aucune session authentifiee.
+- Login ouvre MainActivity seulement apres une connexion valide.
+- Inscription conserve temporairement l'email dans pendingEmail et ouvre Onboarding.
+- Onboarding comporte 3 pages swipeables ; apres Commencer, l'email pending est active et MainActivity s'ouvre.
+- MainActivity exige loggedIn=true et un email.
+- Deconnexion efface email, loggedIn et pendingEmail.
+
+Test conseille sur le telephone : desinstaller l'ancienne application puis installer la nouvelle APK.
+Si vous utilisez Run/Apply Changes sur une installation existante, effacer d'abord les donnees de l'application (Parametres Android > Applications > Sommeil Plus > Stockage > Effacer les donnees).
+Ce projet n'a pas ete compile ni execute ici : verifier Gradle Sync puis Build > Make Project dans Android Studio.

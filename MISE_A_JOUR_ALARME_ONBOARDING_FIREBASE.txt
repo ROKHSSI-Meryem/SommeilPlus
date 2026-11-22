@@ -1,0 +1,39 @@
+MISE A JOUR - ALARME REELLE, ONBOARDING APRES DECONNEXION, FIREBASE
+
+1) Alarme reelle (coucher + reveil)
+- Les heures se choisissent dans Alarmes > Configurer (selecteur d'heure + interrupteurs + Enregistrer).
+- A l'heure choisie : le son d'alarme et la vibration se repetent EN BOUCLE (service AlarmRingService)
+  jusqu'a ce que l'on appuie sur une action de la notification :
+    * Arreter        -> coupe le son et ferme la notification.
+    * Repeter 5 min  -> coupe le son ; l'alarme sonne a nouveau 5 minutes plus tard
+                        (recommencer autant de fois que voulu).
+- Securite : sans reponse, le son s'arrete seul apres 10 minutes (la notification reste).
+- Fonctionne ecran verrouille (WakeLock + alarme exacte). L'alarme se reprogramme chaque jour.
+- Permissions ajoutees : USE_EXACT_ALARM, VIBRATE, WAKE_LOCK, FOREGROUND_SERVICE(+MEDIA_PLAYBACK).
+
+2) Deconnexion -> pages d'onboarding
+- Mon compte > Deconnexion ouvre maintenant les 3 pages d'onboarding, puis la connexion.
+- Premiere ouverture sans session : Splash > Onboarding > Connexion.
+
+3) Firebase : voir FIREBASE_SETUP.txt.
+
+Non verifie ici : aucun SDK Android / Gradle disponible, donc pas de compilation ni de test sur appareil.
+Faire Gradle Sync puis Build > Make Project, et tester l'alarme avec une heure 2-3 minutes dans le futur.
+
+
+=== MISE A JOUR 2 ===
+- Mot de passe oublie : un dialogue demande l'e-mail puis Firebase envoie un VRAI e-mail (lien pour choisir
+  un nouveau mot de passe). Penser a verifier les Spams. Personnaliser le message : console Firebase >
+  Authentication > Modeles (Templates) > Reinitialisation du mot de passe (langue Francais, nom de l'expediteur).
+- Splash anime (logo qui apparait avec rebond puis respire, titre/slogan en fondu, etoiles qui scintillent).
+- Deconnexion : Splash > Onboarding > Login.
+- Clavier : toutes les pages tiennent compte du clavier (le contenu defile, le champ actif reste visible,
+  la barre de navigation se cache pendant la saisie).
+- E-mail : boutons rapides  @  @gmail.com  @hotmail.com  @yahoo.com  sous le champ e-mail
+  (Connexion, Inscription, Mot de passe oublie) si la touche @ ne marche pas.
+
+ATTENTION : si vous remplacez le dossier du projet par ce ZIP, remettez app/google-services.json.
+
+=== V3 === Correction crash au demarrage (Ui.edgeToEdge : insetsController demande avant que la fenetre soit prete).
+
+=== V4 === Correction crash apres 'Se connecter' : Task.result lu sans verifier isSuccessful (plantait si Firestore pas encore cree / regles refusees / hors ligne).

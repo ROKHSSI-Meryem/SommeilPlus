@@ -1,0 +1,11 @@
+MISE A JOUR - LANGUES DE SOMMEIL PLUS
+
+- Ajout de Translator.kt pour centraliser les traductions Français / English / العربية.
+- Les textes construits avec Ui.text, Ui.button, Ui.orangeButton, Ui.field et Ui.page sont traduits selon la langue enregistrée.
+- Navigation principale et navigation des pages secondaires traduites.
+- Traduction des libellés des sélecteurs, messages Toast, dialogues et écrans d'alarmes/notifications.
+- La langue choisie reste enregistrée dans SharedPreferences (app/language).
+- Direction RTL activée pour l'arabe sur les écrans principaux.
+- Le choix de langue reste dans Paramètres; choisir une langue recrée l'écran via AppCompat.
+
+IMPORTANT : Le projet n'a pas pu être compilé ni lancé dans cet environnement (pas de wrapper Gradle/SDK Android disponible ici). Il faut ouvrir le dossier dans Android Studio, lancer Sync Project with Gradle Files puis Build > Make Project et tester les 3 langues sur l'émulateur. Certains textes externes générés par Android (ex. dialogues système / sélecteurs natifs) restent dans la langue du système.

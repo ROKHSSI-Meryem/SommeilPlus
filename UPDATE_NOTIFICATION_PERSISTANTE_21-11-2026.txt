@@ -1,0 +1,7 @@
+Mise a jour notification alarme - 21/11/2026
+- Ajout de la vue personnalisee Heads-up pour afficher les boutons dans la notification emergente quand Android l'autorise.
+- Notification persistante (ongoing) conservee dans la barre de notifications jusqu'a une action explicite.
+- Bouton Arreter rouge conserve.
+- Bouton Repeter 5 min passe au bleu principal du theme (#16B9F2).
+- Les actions Arreter et Repeter continuent d'arreter le son/vibreur et de retirer la notification; Repeter reprogramme l'alarme dans 5 minutes.
+- Android controle la duree d'affichage de la banniere Heads-up; la notification reste dans le volet jusqu'a l'action utilisateur.

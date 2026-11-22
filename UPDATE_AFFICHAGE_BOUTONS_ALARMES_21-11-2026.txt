@@ -1,0 +1,10 @@
+MODIFICATION - AFFICHAGE DES BOUTONS DES ALARMES
+
+Comportement demandé :
+- Avant l'enregistrement d'une configuration (ou après modification d'une heure/interrupteur), afficher « Enregistrer les alarmes » et cacher « Désactiver les deux alarmes ».
+- Après l'enregistrement, si au moins une alarme est activée, cacher « Enregistrer les alarmes » et afficher « Désactiver les deux alarmes ».
+- Si l'utilisateur modifie de nouveau une heure ou l'état d'un interrupteur, réafficher le bouton d'enregistrement et cacher le bouton de désactivation jusqu'au prochain enregistrement.
+- Le bouton de désactivation désactive les deux alarmes et passe par la sauvegarde existante.
+
+Fichier modifié : app/src/main/java/com/example/sommeilplus/NotificationsActivity.kt
+Ajout de la préférence reminders/alarmsConfigured pour mémoriser qu'une configuration a été enregistrée.

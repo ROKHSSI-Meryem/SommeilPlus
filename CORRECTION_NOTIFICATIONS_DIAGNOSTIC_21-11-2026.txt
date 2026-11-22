@@ -1,0 +1,16 @@
+Correction des notifications - 21/11/2026
+
+Modifications :
+- Préparation explicite des deux canaux de notification avant la première alarme.
+- Nouveaux identifiants de canaux (v7 pour le rappel, v3 pour la notification persistante) afin d'éviter qu'un ancien canal silencieux ou désactivé par une ancienne version soit réutilisé.
+- Vérification de l'autorisation POST_NOTIFICATIONS, de l'autorisation globale des notifications, de l'état des canaux et de l'accès aux alarmes exactes dans l'écran Réveil & coucher.
+- Message de diagnostic plus précis lorsque l'autorisation Android manque.
+- Après un refus de permission, l'application n'ouvre plus brutalement les paramètres toute seule ; l'utilisateur peut ouvrir les paramètres avec le bouton dédié.
+- Les alarmes enregistrées sont reprogrammées après l'acceptation de la permission.
+
+Limites Android importantes :
+- Android 13+ n'affiche pas les notifications normales dans le tiroir si POST_NOTIFICATIONS est refusée.
+- L'utilisateur peut désactiver une application ou un canal depuis les paramètres Android ; l'application ne peut pas contourner ce choix.
+- Sans accès aux alarmes exactes sur Android 12+, Android peut retarder l'heure de déclenchement.
+
+Vérification : assembleDebug n'a pas pu être exécuté dans cet environnement car Gradle 9.3.0 n'est pas présent localement et services.gradle.org est inaccessible (UnknownHostException). Le projet doit être compilé et testé sur Android Studio/appareil avant de considérer la correction comme validée.

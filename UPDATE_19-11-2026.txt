@@ -1,0 +1,10 @@
+Corrections based on the latest emulator screenshot:
+- Increased app typography and spacing using density-independent dp dimensions.
+- Increased dashboard cards, buttons, toolbar and bottom navigation sizes.
+- Replaced the tiny overflow glyph with a clearer menu icon; the menu still contains alarms, notifications, history, analysis and CSV export.
+- Dashboard sleep-duration chart is now always rendered, including before the first sleep session. Empty state displays a zero baseline and an explanation instead of hiding the chart.
+- Kept the existing project screens and features in place.
+
+Validation:
+- ZIP archive integrity checked.
+- A full Android Gradle build was not run in this environment because the project archive does not include a Gradle wrapper and Gradle/Android SDK are not installed here. Please run Gradle Sync and Build > Make Project in Android Studio.

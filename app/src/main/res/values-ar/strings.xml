@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">نوم أفضل</string>
+    <string name="welcome">نم جيداً، عش أفضل</string>
+    <string name="dashboard">لوحة التحكم</string>
+    <string name="goals">الأهداف</string>
+    <string name="advice">نصائح النوم</string>
+    <string name="account">حسابي</string>
+</resources>

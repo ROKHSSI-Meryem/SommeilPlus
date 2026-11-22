@@ -1,0 +1,19 @@
+SOMMEIL PLUS — MISE À JOUR DU 21/11/2026
+
+Base : SommeilPlus_RETOUR_CORRIGE_20-11-2026.zip
+
+MODIFICATIONS APPLIQUÉES
+1. Nouveau logo lune/étoile bleu-cyan-violet pour l'application, l'en-tête et les icônes du launcher.
+2. Images Onboarding en CENTER_CROP, sans padding intérieur ni espace entre l'image et sa carte.
+3. Boutons Enregistrer / Annuler de « Ajouter une session » harmonisés avec le thème.
+4. Boutons « Enregistrer les alarmes » et « Désactiver les deux alarmes » différenciés et harmonisés.
+5. Notifications d'alarme avec accent de couleur SommeilPlus et actions Arrêter / Répéter 5 min.
+6. Les alarmes continuent en arrière-plan lorsque l'application est quittée. À la Déconnexion, les deux alarmes, les répétitions en attente, le son, la vibration et les notifications sont arrêtés et les alarmes sont désactivées.
+7. Boutons « Enregistrer » et « Continuer le suivi » du dialogue de fin de suivi stylisés.
+8. Notifications persistantes, non supprimées par un balayage ou un simple toucher : elles sont retirées par les actions Arrêter ou Répéter 5 min.
+9. Boutons de retour des pages secondaires remplacés par « Précédent », avec le style de l'onboarding.
+
+VALIDATION
+- Tous les fichiers XML ont été analysés avec succès.
+- L'archive ZIP a été vérifiée après création.
+- La compilation Gradle n'a pas pu être exécutée dans cet environnement, car le wrapper doit télécharger Gradle depuis Internet et la connexion réseau n'est pas disponible ici. Effectuer Gradle Sync puis Build > Make Project dans Android Studio.

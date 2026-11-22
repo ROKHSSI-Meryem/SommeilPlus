@@ -1,0 +1,6 @@
+MISE A JOUR LOGO GLOBAL - 21/11/2026
+
+- Nouveau logo SommeilPlus applique a la ressource centrale drawable-nodpi/sommeil_plus_logo.png.
+- Toutes les pages qui utilisent Ui.logo(...) affichent automatiquement le nouveau logo : Splash, Login, Inscription, Onboarding, barre principale et en-tetes des pages secondaires.
+- Icônes de lancement Android mises a jour (adaptive foreground + anciennes densites mipmap).
+- Les notifications conservent leur petite icone système monochrome, car Android exige une icone de notification simplifiee.

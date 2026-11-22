@@ -1,0 +1,9 @@
+MISE A JOUR - BOUTONS ADAPTATIFS (21-11-2026)
+
+- Correction globale des boutons communs de l'application.
+- Hauteur WRAP_CONTENT avec hauteur minimale confortable : les boutons grandissent selon le texte.
+- Les libelles longs peuvent passer sur plusieurs lignes au lieu d'etre coupes.
+- Alignement centre, marges internes adaptees et largeur complete conservee.
+- Correction egalement des boutons d'action des boites de dialogue.
+- Couleurs, degradés, arrondis et actions existantes conserves.
+- Aucun ecran ni fonctionnalite retire.

@@ -1,0 +1,5 @@
+MISE A JOUR - LOGO DANS LES EN-TETES (21-11-2026)
+
+- Le logo de SommeilPlus reste dans la barre principale, en haut, à côté du nom de l'application.
+- Le logo a été retiré des en-têtes des pages secondaires, à côté des titres de page.
+- Les titres, couleurs, boutons, navigation, notifications et autres fonctionnalités restent inchangés.
